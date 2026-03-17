@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as home) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><i class="fas fa-shopping-bag"></i> ShopSphere</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search products...">
+                    </div>
+                    <i class="fas fa-heart wishlist-icon" id="wishlistIcon"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Page Main Content -->
+    <main class="products-main">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="all" checked> All</label>
+                        <label><input type="checkbox" value="electronics"> Electronics</label>
+                        <label><input type="checkbox" value="clothing"> Clothing</label>
+                        <label><input type="checkbox" value="home"> Home & Garden</label>
+                        <label><input type="checkbox" value="sports"> Sports</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" id="priceFilter" min="0" max="1000" value="1000">
+                        <span id="priceValue">$1000</span>
+                    </div>
+                </div>
+                <button class="clear-filters">Clear Filters</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-header">
+                <h2>All Products</h2>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as home) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopSphere</h3>
+                    <p>Your trusted online shopping destination</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
